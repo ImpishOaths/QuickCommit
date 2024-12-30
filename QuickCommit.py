@@ -9,4 +9,4 @@ msg += date
 subprocess.call(["git","add","."])
 subprocess.call(["git","commit","-m",msg])
 subprocess.call(["git","push"])
-msgbox("Done!")
+msgbox("Commit complete!\n"+msg)
