@@ -3,9 +3,9 @@ from datetime import datetime
 from easygui import *
 msg = enterbox("Commit message:")
 if(msg == ""):
-    date = datetime.today().strftime('%Y/%m/%d %H:%M:%S')
+    date = datetime.today().strftime('%a %d %b %Y, %I:%M%p')
     msg = enterbox("Explain no commit:")
-    with open("noCommit.log", "a") as noCommit:
+    with open("noCommits.log", "a") as noCommit:
         noCommit.write(msg)
         noCommit.write(" - " + date + "\n")
 subprocess.call(["git","add","."])
