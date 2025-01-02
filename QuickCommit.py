@@ -3,7 +3,7 @@ from datetime import datetime
 from easygui import *
 msg = enterbox("Commit message:")
 if(msg == ""):
-    date = datetime.today().strftime('%Y-%m-%d')
+    date = datetime.today().strftime('%Y/%m/%d %H:%M:%S')
     msg = enterbox("Explain no commit:")
     with open("noCommit.log", "a") as noCommit:
         noCommit.write(msg)
